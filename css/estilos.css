@@ -105,7 +105,7 @@ img#planeta {
 }
 
 img#subt {
-    transform: translateY(55rem);
+    transform: translateY(45rem);
     width: 25%;
 }
 
@@ -133,7 +133,7 @@ img#subt {
     line-height: 1;
 }
   
-  .space {
+.space {
     --size: 2px;
     --space-layer: 
       4vw 50vh 0 #fff,

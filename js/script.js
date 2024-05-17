@@ -17,3 +17,15 @@ const generateSpaceLayer = (size, selector, totalStars, duration) => {
 generateSpaceLayer("2px", ".space-1", 250, "25s");
 generateSpaceLayer("3px", ".space-2", 100, "20s");
 generateSpaceLayer("6px", ".space-3", 25, "15s");
+
+let text = document.getElementById('text');
+let planeta = document.getElementById('planeta');
+let halo = document.getElementById('halo');
+
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+
+  text.style.marginTop = value * 2 + 'px';
+  planeta.style.marginTop = value * -2 + 'px';
+  halo.style.marginTop = value * -2 + 'px';
+})
