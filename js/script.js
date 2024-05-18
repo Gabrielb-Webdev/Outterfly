@@ -18,14 +18,19 @@ generateSpaceLayer("2px", ".space-1", 250, "25s");
 generateSpaceLayer("3px", ".space-2", 100, "20s");
 generateSpaceLayer("6px", ".space-3", 25, "15s");
 
-let text = document.getElementById('text');
-let planeta = document.getElementById('planeta');
-let halo = document.getElementById('halo');
+let sections = document.querySelectorAll('section');
 
-window.addEventListener('scroll', () => {
-  let value = window.scrollY;
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
 
-  text.style.marginTop = value * 2 + 'px';
-  planeta.style.marginTop = value * -2 + 'px';
-  halo.style.marginTop = value * -2 + 'px';
-})
+    if (top >= offset && top < offset + height) {
+      sec.classList.add('show-animate');
+    }
+    else {
+      sec.classList.remove('show-animate');
+    }
+  })
+}
