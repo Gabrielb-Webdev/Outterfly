@@ -66,19 +66,6 @@ header {
     opacity: 1;
 }
 
-
-.parallax {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('../sources/back-universo.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 #text {
     position: absolute;
     top: 40%;
@@ -165,7 +152,8 @@ img#subt {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #1f242d;
+    overflow-x: hidden;
+    background: #020912;
 }
 
 h1 {
@@ -179,11 +167,162 @@ p {
     font-weight: 600;
 }
 
+section .animate {
+    filter: blur(5px);
+    transition: 1s;
+}
+
+section.show-animate .animate {
+    filter: blur(0);
+}
+
+.sec-1 .animate {
+    transform: translateX(-100%);
+}
+
+.sec-1.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sec-2 .animate {
+    transform: translateX(100%);
+}
+
+.sec-2.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sec-3 .animate {
+    transform: scale(.7);
+}
+
+.sec-3.show-animate .animate {
+    transform: scale(1);
+}
+
 .sec-1 {
     background: url(../sources/backwebb.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-position-x: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg 
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.1);
+    }
+}
+
+.shooting span
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, -0.9),
+    0 0 20px rgba(255, 255, 255, 1);
+    animation: animate 3s linear infinite;
+}
+
+.shooting span::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+    }
+}
+
+.shooting span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0;
+    animation-duration: 1s;
+}
+
+.shooting span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 3s;
+}
+
+.shooting span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.3s;
+    animation-duration: 2s;
+}
+
+.shooting span:nth-child(4){
+    top: 0px;
+    right: 180px;
+    left: initial;
+    animation-delay: 2.3s;
+    animation-duration: 1.5s;
+}
+
+.shooting span:nth-child(5){
+    top: 0px;
+    right: 400px;
+    left: initial;
+    animation-delay: 1.8s;
+    animation-duration: 2.5s;
+}
+
+.shooting span:nth-child(6){
+    top: 0px;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.shooting span:nth-child(7){
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+
+.shooting span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
 }
 
 .sec-2 {
@@ -203,4 +342,7 @@ p {
 
 .sec-4 p {
     color: #ff0;
+}
+
+.shooting{
 }
