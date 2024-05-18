@@ -1,3 +1,20 @@
+let sections = document.querySelectorAll('section');
+
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
+
+    if (top >= offset && top < offset + height) {
+      sec.classList.add('show-animate');
+    }
+    else {
+      sec.classList.remove('show-animate');
+    }
+  })
+}
+
 const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"];
 
 const generateSpaceLayer = (size, selector, totalStars, duration) => {
@@ -17,20 +34,3 @@ const generateSpaceLayer = (size, selector, totalStars, duration) => {
 generateSpaceLayer("2px", ".space-1", 250, "25s");
 generateSpaceLayer("3px", ".space-2", 100, "20s");
 generateSpaceLayer("6px", ".space-3", 25, "15s");
-
-let sections = document.querySelectorAll('section');
-
-window.onscroll = () => {
-  sections.forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop;
-    let height = sec.offsetHeight;
-
-    if (top >= offset && top < offset + height) {
-      sec.classList.add('show-animate');
-    }
-    else {
-      sec.classList.remove('show-animate');
-    }
-  })
-}
