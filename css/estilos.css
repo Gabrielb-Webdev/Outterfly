@@ -22,7 +22,7 @@ body {
 
 /* Estilos para el header */
 header {
-    position: absolute;
+    position: fixed; /* Cambiar de absolute a fixed */
     top: 0;
     left: 0;
     width: 100%;
@@ -32,7 +32,16 @@ header {
     align-items: center;
     user-select: none;
     z-index: 100;
+    transition: all 0.3s ease; /* Transición suave */
+    background: transparent; /* Asegurarse de que el fondo sea transparente */
 }
+
+header.scrolled {
+    padding: 30px 100px; /* Reducir el padding cuando se desplaza */
+    background: transparent; /* Mantener el fondo transparente */
+}
+
+
 
 .logo {
     font-size: 2em;
