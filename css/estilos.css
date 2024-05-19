@@ -118,7 +118,7 @@ section.show-animate .animate {
 /* Estilos específicos para sec-1 */
 .sec-1 {
     position: relative;
-    background: url(../sources/backwebb.jpg);
+    background: url(../sources/backwebb.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -187,7 +187,6 @@ section.show-animate .animate {
 
 /* Estilos específicos para sec-2 */
 .sec-2 {
-    background: url(../sources/back-universo.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -294,7 +293,7 @@ img.svg-icon.download-icon {
     position: absolute;
     inset: -2px;
     border-radius: 50%;
-    border: 5px solid #2364aa;
+    border: 5px solid white;
     transform: rotate(45deg);
     animation: prixClipFix 3s forwards linear;
 }
