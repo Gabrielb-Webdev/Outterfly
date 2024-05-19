@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Ocultar la barra de desplazamiento en navegadores webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Reset básico y configuración de fuente */
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +15,12 @@
 
 body {
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-y: scroll; /* Permitir el desplazamiento vertical */
+    overflow-x: hidden; /* Prevenir el desplazamiento horizontal */
+    -ms-overflow-style: none;  /* IE y Edge */
 }
 
+/* Estilos para el header */
 header {
     position: absolute;
     top: 0;
@@ -21,16 +30,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
     z-index: 100;
 }
 
 .logo {
     font-size: 2em;
     color: #fff;
-    user-select: none;
 }
 
-.navigation a{
+.navigation a {
     position: relative;
     font-size: 1.1em;
     color: #fff;
@@ -66,87 +75,8 @@ header {
     opacity: 1;
 }
 
-#text {
-    position: absolute;
-    top: 40%;
-    width: 35%;
-}
-
-.parallax img {
-    position: absolute;
-    top: 0;
-    left: auto;
-    right: auto;
-    width: 65%;
-    pointer-events: none;
-}
-
-.parallax img#halo {
-    z-index: 0;
-    top: -17%;
-    width: 100%;
-}
-
-img#planeta {
-    z-index: 1;
-}
-
-img#subt {
-    transform: translateY(45rem);
-    width: 25%;
-}
-
-.sec {
-    position: relative;
-    background: #020912;
-    padding: 30px 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sec h2 {
-    font-size: 3em;
-    color: #fff;
-    text-align: center;
-}
-
-.sec p {
-    font-size: 1em;
-    color: #fff;
-    font-weight: 300;
-    text-align: center;
-    width: 50%;
-    line-height: 1;
-}
-  
-.space {
-    --size: 2px;
-    --space-layer: 
-      4vw 50vh 0 #fff,
-      18vw 88vh 0 #fff,
-      73vw 14vh 0 #fff;
-    
-    width: var(--size);
-    height: var(--size);
-    background: white;
-    box-shadow: var(--space-layer);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.75;
-  }
-  
-  .space {
-     animation: move var(--duration) linear infinite;
-  }
-  
-  @keyframes move {
-    from { transform: translateY(0); }
-    to { transform: translateY(-100vh); }
-  }
-
-  section {
+/* Estilos para las secciones */
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,12 +106,81 @@ section.show-animate .animate {
     filter: blur(0);
 }
 
+/* Estilos específicos para sec-1 */
+.sec-1 {
+    position: relative;
+    background: url(../sources/backwebb.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position-x: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
 .sec-1 .animate {
-    transform: translateX(-100%);
+    transform: scale(.7);
 }
 
 .sec-1.show-animate .animate {
-    transform: translateX(0);
+    transform: scale(1);
+}
+
+.tittle {
+    position: absolute;
+    top: 40%;
+    width: 25%;
+    height: auto;
+    user-select: none;
+}
+
+.evo {
+    position: absolute;
+    top: 75%;
+    user-select: none;
+}
+
+.svg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre los SVG */
+    position: absolute; /* Para posicionar dentro de la sección */
+    right: 30px; /* Alinear a la derecha */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajuste adicional para centrar */
+}
+
+.svg-icon {
+    width: 25px; /* Ajustar el tamaño según sea necesario */
+    height: auto;
+}
+
+/* Animación de salto corto hacia abajo */
+@keyframes short-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+.short-bounce {
+    animation: short-bounce 2s infinite;
+}
+
+/* Estilos específicos para sec-2 */
+.sec-2 {
+    background: url(../sources/back-universo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .sec-2 .animate {
@@ -192,6 +191,11 @@ section.show-animate .animate {
     transform: translateX(0);
 }
 
+.sec-2 p {
+    color: #0f0;
+}
+
+/* Estilos específicos para sec-3 */
 .sec-3 .animate {
     transform: scale(.7);
 }
@@ -200,149 +204,29 @@ section.show-animate .animate {
     transform: scale(1);
 }
 
-.sec-1 {
-    background: url(../sources/backwebb.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-position-x: center;
-    animation: animateBg 5s linear infinite;
-}
-
-@keyframes animateBg 
-{
-    0%
-    {
-        transform: scale(1);
-    }
-    50%
-    {
-        transform: scale(1.1);
-    }
-}
-
-.shooting span
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
-    0 0 0 8px rgba(255, 255, 255, -0.9),
-    0 0 20px rgba(255, 255, 255, 1);
-    animation: animate 3s linear infinite;
-}
-
-.shooting span::before
-{
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(315deg) translateX(0);
-        opacity: 1;
-    }
-
-    70%{
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(315deg) translateX(-1000px);
-    }
-}
-
-.shooting span:nth-child(1){
-    top: 0;
-    right: 0;
-    left: initial;
-    animation-delay: 0;
-    animation-duration: 1s;
-}
-
-.shooting span:nth-child(2){
-    top: 0;
-    right: 80px;
-    left: initial;
-    animation-delay: 0.8s;
-    animation-duration: 3s;
-}
-
-.shooting span:nth-child(3){
-    top: 80px;
-    right: 0px;
-    left: initial;
-    animation-delay: 1.3s;
-    animation-duration: 2s;
-}
-
-.shooting span:nth-child(4){
-    top: 0px;
-    right: 180px;
-    left: initial;
-    animation-delay: 2.3s;
-    animation-duration: 1.5s;
-}
-
-.shooting span:nth-child(5){
-    top: 0px;
-    right: 400px;
-    left: initial;
-    animation-delay: 1.8s;
-    animation-duration: 2.5s;
-}
-
-.shooting span:nth-child(6){
-    top: 0px;
-    right: 600px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 3s;
-}
-
-.shooting span:nth-child(7){
-    top: 300px;
-    right: 0px;
-    left: initial;
-    animation-delay: 1.2s;
-    animation-duration: 1.75s;
-}
-
-.shooting span:nth-child(8){
-    top: 0px;
-    right: 700px;
-    left: initial;
-    animation-delay: 1.4s;
-    animation-duration: 1.25s;
-}
-
-.sec-2 {
-    background: url(../sources/back-universo.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.sec-2 p {
-    color: #0f0;
-}
-
 .sec-3 p {
     color: #e0f;
 }
 
+/* Estilos específicos para sec-4 */
 .sec-4 p {
     color: #ff0;
 }
 
-.shooting{
+img.svg-icon.download-icon {
+    position: absolute;
+    top: 85%;
+}
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-text {
+    color: #fff;
+    position: absolute;
+    top: 90%;
+    font-size: 16px;
 }
