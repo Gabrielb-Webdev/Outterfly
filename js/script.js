@@ -1,3 +1,14 @@
+const button = document.querySelector('.button');
+
+button.addEventListener('click', function() {
+    button.classList.remove('done');
+    button.classList.add('download');
+    setTimeout(function() {
+        button.classList.remove('download');
+        button.classList.add('done');
+    }, 3000);
+});
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.navigation a');
 let header = document.querySelector('header');
