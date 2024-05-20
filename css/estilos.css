@@ -161,7 +161,7 @@ section.show-animate .animate {
     gap: 20px; /* Espacio entre los SVG */
     position: absolute; /* Para posicionar dentro de la sección */
     right: 30px; /* Alinear a la derecha */
-    top: 45%; /* Centrar verticalmente */
+    top: 44%; /* Centrar verticalmente */
     transform: translateY(-50%); /* Ajuste adicional para centrar */
     user-select: none;
 }
