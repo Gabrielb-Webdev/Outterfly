@@ -166,6 +166,17 @@ section.show-animate .animate {
     user-select: none;
 }
 
+img.animate.green {
+    position: absolute;
+    left: 3.5%;
+}
+
+img.animate.red {
+    position: absolute;
+    right: 3.3%;
+    top: 0%;
+}
+
 .svg-icon {
     width: 25px; /* Ajustar el tamaño según sea necesario */
     height: auto;
