@@ -149,6 +149,7 @@ section.show-animate .animate {
     position: absolute;
     top: 70%;
     user-select: none;
+    width: 50%;
 }
 
 .svg-container {
