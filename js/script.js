@@ -91,5 +91,30 @@ window.onscroll = () => {
   }
 };
 
-const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"];
+document.addEventListener('DOMContentLoaded', () => {
+  // Función para crear animaciones de formación
+  function createFormingAnimation(el, delay = 0) {
+      return new mojs.Html({
+          el: el,
+          opacity: { 0: 1 }, // Opacidad de 0 a 1
+          scale: { 0: 1 }, // Escala de 0 a 1
+          duration: 1000, // Duración de la animación en ms
+          delay: delay, // Retraso antes de que comience la animación
+          easing: 'quad.out' // Efecto de aceleración cuadrática
+      }).play();
+  }
 
+  // Aplicar la animación a cada imagen SVG
+  createFormingAnimation('#logo-green');
+  createFormingAnimation('.green', 200);
+  createFormingAnimation('.circular', 400);
+  createFormingAnimation('.animate:nth-child(4)', 600); // U
+  createFormingAnimation('.animate:nth-child(5)', 800); // T ABAJO
+  createFormingAnimation('.animate:nth-child(6)', 1000); // T ARRIBA
+  createFormingAnimation('.animate:nth-child(7)', 1200); // E
+  createFormingAnimation('.animate:nth-child(8)', 1400); // R
+  createFormingAnimation('.animate:nth-child(9)', 1600); // F
+  createFormingAnimation('.animate:nth-child(10)', 1800); // L
+  createFormingAnimation('.animate:nth-child(11)', 2000); // Y
+  createFormingAnimation('.red', 2200);
+});
