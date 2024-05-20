@@ -413,7 +413,7 @@ img.animate.line-red {
 }
 
 .centered-text {
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #fff;
     max-width: 90%;
     line-height: 1.5;
@@ -492,4 +492,51 @@ img.animate.line-red {
 
 .column.is-one-quarter, .column.is-one-quarter-tablet {
     width: 15%;
+}
+
+.sec-3 {
+    position: relative;
+    padding: 20px; /* Asegura que el contenido no se superponga con la línea */
+}
+
+.sec-3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10%;
+    height: 2px; /* Ajusta el grosor de la línea según sea necesario */
+    background-color: #fff; /* Ajusta el color de la línea según sea necesario */
+    transform: translateY(-50%);
+}
+
+.sec-3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Posiciona el punto justo al final de la línea */
+    width: 10px; /* Ajusta el tamaño del punto según sea necesario */
+    height: 10px; /* Asegura que el punto sea redondo */
+    background-color: #14FCCE; /* Color del punto */
+    border-radius: 50%; /* Hace que el punto sea redondo */
+    transform: translate(-50%, -50%);
+}
+
+.sec-3-text {
+    position: absolute;
+    top: 50%;
+    left: 11%; /* Ajusta este valor según sea necesario para alinear el texto con el punto */
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 4rem; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.sec-3-text .highlight {
+    color: #14FCCE; /* Color para la letra destacada */
+    font-weight: bold;
+    font-size: 4rem; /* Ajusta el tamaño de la letra destacada */
+}
+
+.small-text {
+    font-size: 1.5rem
 }
