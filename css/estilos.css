@@ -358,7 +358,7 @@ img.animate.line-green {
 
 img.animate.line-red {
     position: absolute;
-    top: 80%;
+    top: 85%;
     right: 4%;
     width: 53%;
 }
@@ -397,4 +397,12 @@ img.animate.line-red {
 
 .green {
     animation: fadeInReverse 1s ease forwards;
+}
+
+.red {
+    animation: fadeInReverse 1s ease forwards;
+}
+
+.hidden {
+    display: none;
 }

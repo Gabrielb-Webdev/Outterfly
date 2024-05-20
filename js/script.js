@@ -1,13 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
   const logoGreen = document.getElementById('logo-green');
   const logoRed = document.querySelector('.line-red');
+  const redCircle = document.querySelector('.red');
 
+  // Escuchar el evento 'animationend' en el logo verde
   logoGreen.addEventListener('animationend', () => {
-    logoRed.classList.add('show-red');
+      // Cuando la animación del logo verde termine, agregar la clase para mostrar el círculo rojo
+      logoRed.classList.add('show-red');
   });
 
+  // Escuchar el evento 'animationend' en el logo rojo
+  logoRed.addEventListener('animationend', () => {
+      // Cuando la animación del logo rojo termine, mostrar el círculo rojo y agregar su clase de animación
+      redCircle.classList.remove('hidden');
+      redCircle.classList.add('red');
+  });
+
+  // Agregar la clase de animación al logo verde
   logoGreen.classList.add('line-green');
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const greenBall = document.querySelector('.green');
