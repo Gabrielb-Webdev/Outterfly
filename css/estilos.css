@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --bulma-skeleton-background: var(--bulma-border);
+    --bulma-skeleton-radius: var(--bulma-radius-small);
+    --bulma-skeleton-block-min-height: 4.5em;
+    --bulma-skeleton-lines-gap: 0.75em;
+    --bulma-skeleton-line-height: 0.75em;
+  }
+
 /* Ocultar la barra de desplazamiento en navegadores webkit (Chrome, Safari) */
 body::-webkit-scrollbar {
     display: none;
@@ -173,15 +181,14 @@ section.show-animate .animate {
 
 img.animate.green {
     position: absolute;
-    left: 3.5%;
+    left: 33%;
 }
 
 img.animate.red {
     position: absolute;
-    right: 3.3%;
+    right: 32.9%;
     top: 0%;
 }
-
 .svg-icon {
     width: 25px; /* Ajustar el tamaño según sea necesario */
     height: auto;
@@ -204,23 +211,12 @@ img.animate.red {
     animation: short-bounce 2s infinite;
 }
 
-/* Estilos específicos para sec-2 */
-.sec-2 {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 .sec-2 .animate {
     transform: translateX(100%);
 }
 
 .sec-2.show-animate .animate {
     transform: translateX(0);
-}
-
-.sec-2 p {
-    color: #0f0;
 }
 
 /* Estilos específicos para sec-3 */
@@ -351,16 +347,16 @@ img.svg-icon.download-icon {
 
 img.animate.line-green {
     position: absolute;
-    left: 4%;
-    top: -95%;
-    width: 23%;
+    left: 33%;
+    bottom: 100%;
+    width: 9%;
 }
 
 img.animate.line-red {
     position: absolute;
-    top: 85%;
-    right: 4%;
-    width: 53%;
+    top: 90%;
+    right: 33%;
+    width: 19.5%;
 }
 
 @keyframes revealFromLeft {
@@ -405,4 +401,95 @@ img.animate.line-red {
 
 .hidden {
     display: none;
+}
+
+.sec-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    user-select: none;
+}
+
+.centered-text {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    color: #fff;
+    max-width: 90%;
+    line-height: 1.5;
+    margin: 10vh 0 0 0;
+}
+
+.centered-text span {
+    font-weight: bold;
+    color: #14FCCE;
+}
+
+.columns {
+    width: 100%;
+    margin-top: 2rem; /* Ajusta el espacio entre el texto y las tarjetas */
+}
+
+.custom-card {
+    position: relative; /* Necesario para posicionar el overlay */
+    border-radius: 15px;
+    height: 500px;
+    overflow: visible; /* Permite que el contenido sobresalga de los bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir toda la tarjeta */
+    object-position: center; /* Centra la imagen dentro de la tarjeta */
+    border-radius: 15px; /* Asegura que las imágenes sigan los bordes redondeados de la tarjeta */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al inicio (parte superior) */
+    justify-content: center; /* Centra horizontalmente */
+    pointer-events: none; /* Permite hacer clic a través del overlay */
+}
+
+.card-logo {
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    width: 150px; /* Ajusta el tamaño del logotipo según sea necesario */
+    z-index: 1;
+}
+
+.card-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+    text-align: center;
+}
+
+.card-bottom-image {
+    position: absolute;
+    bottom: -45px; /* Ajusta la posición vertical de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Asegura que la imagen esté por encima de la tarjeta */
+}
+
+.bottom-image {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.column.is-one-quarter, .column.is-one-quarter-tablet {
+    width: 15%;
 }
