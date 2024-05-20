@@ -41,8 +41,6 @@ header.scrolled {
     background: transparent; /* Mantener el fondo transparente */
 }
 
-
-
 .logo {
     font-size: 2em;
     color: #fff;
@@ -137,19 +135,23 @@ section.show-animate .animate {
     transform: scale(1);
 }
 
-.tittle {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     position: absolute;
-    top: 40%;
-    width: 25%;
-    height: auto;
-    user-select: none;
+    top: 47.5%;
+}
+
+.container img {
+    margin: 10px; /* Espacio entre las imágenes */
 }
 
 .evo {
     position: absolute;
     top: 70%;
     user-select: none;
-    width: 50%;
 }
 
 .svg-container {
@@ -159,7 +161,7 @@ section.show-animate .animate {
     gap: 20px; /* Espacio entre los SVG */
     position: absolute; /* Para posicionar dentro de la sección */
     right: 30px; /* Alinear a la derecha */
-    top: 50%; /* Centrar verticalmente */
+    top: 45%; /* Centrar verticalmente */
     transform: translateY(-50%); /* Ajuste adicional para centrar */
     user-select: none;
 }
