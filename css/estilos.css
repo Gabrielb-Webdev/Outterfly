@@ -5,6 +5,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset básico y configuración de fuente */
 * {
     margin: 0;
@@ -343,4 +347,17 @@ img.svg-icon.download-icon {
     65%  {transform: scale3d(.95, 1.05, 1)}
     75%  {transform: scale3d(1.05, .95, 1)}
     100% {transform: scale3d(1, 1, 1)}
+}
+
+img.animate.line-green {
+    position: absolute;
+    left: 3%;
+    top: -90%;
+}
+
+img.animate.line-red {
+    position: absolute;
+    top: 100%;
+    right: 4%;
+    width: 53%;
 }

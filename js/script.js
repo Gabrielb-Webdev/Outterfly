@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.navigation a');
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const sectionId = link.getAttribute('data-section');
+          const section = document.getElementById(sectionId);
+          section.scrollIntoView({ behavior: 'smooth' });
+          
+          // Actualizar la clase activa
+          navLinks.forEach(navLink => navLink.classList.remove('active'));
+          link.classList.add('active');
+      });
+  });
+});
+
 const button = document.querySelector('.button');
 
 button.addEventListener('click', function() {
