@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
   logoGreen.classList.add('line-green');
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
   const greenBall = document.querySelector('.green');
   greenBall.classList.add('green');
