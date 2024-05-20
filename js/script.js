@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const logoGreen = document.getElementById('logo-green');
+  const logoRed = document.querySelector('.line-red');
+
+  logoGreen.addEventListener('animationend', () => {
+    logoRed.classList.add('show-red');
+  });
+
+  logoGreen.classList.add('line-green');
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const greenBall = document.querySelector('.green');
+  greenBall.classList.add('green');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.navigation a');
 
@@ -66,20 +82,3 @@ window.onscroll = () => {
 
 const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"];
 
-const generateSpaceLayer = (size, selector, totalStars, duration) => {
-  const layer = [];
-  for (let i = 0; i < totalStars; i++) {
-    const color = COLORS[~~(Math.random() * COLORS.length)];
-    const x = Math.floor(Math.random() * 100);
-    const y = Math.floor(Math.random() * 100);
-    layer.push(`${x}vw ${y}vh 0 ${color}, ${x}vw ${y + 100}vh 0 ${color}`);
-  }
-  const container = document.querySelector(selector);
-  container.style.setProperty("--size", size);
-  container.style.setProperty("--duration", duration);
-  container.style.setProperty("--space-layer", layer.join(","));
-};
-
-generateSpaceLayer("2px", ".space-1", 250, "25s");
-generateSpaceLayer("3px", ".space-2", 100, "20s");
-generateSpaceLayer("6px", ".space-3", 25, "15s");

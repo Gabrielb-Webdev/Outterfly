@@ -351,13 +351,50 @@ img.svg-icon.download-icon {
 
 img.animate.line-green {
     position: absolute;
-    left: 3%;
-    top: -90%;
+    left: 4%;
+    top: -95%;
+    width: 23%;
 }
 
 img.animate.line-red {
     position: absolute;
-    top: 100%;
+    top: 80%;
     right: 4%;
     width: 53%;
+}
+
+@keyframes revealFromLeft {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+}
+
+.line-green {
+    animation: revealFromLeft 2s ease-in-out forwards;
+}
+
+.line-red {
+    opacity: 0;
+    animation: revealFromLeft 2s ease-in-out forwards;
+    animation-delay: 2s; /* Ajusta el retraso según sea necesario */
+}
+
+.show-red {
+    opacity: 1 !important;
+}
+
+@keyframes fadeInReverse {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.green {
+    animation: fadeInReverse 1s ease forwards;
 }
