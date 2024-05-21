@@ -221,11 +221,11 @@ img.animate.red {
 
 /* Estilos específicos para sec-3 */
 .sec-3 .animate {
-    transform: scale(.7);
+    transform: translateX(-100%);
 }
 
 .sec-3.show-animate .animate {
-    transform: scale(1);
+    transform: translateX(0);
 }
 
 .sec-3 p {
@@ -497,12 +497,13 @@ img.animate.line-red {
 .sec-3 {
     position: relative;
     padding: 20px; /* Asegura que el contenido no se superponga con la línea */
+    overflow-y: hidden;
 }
 
 .sec-3::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 0;
     width: 10%;
     height: 2px; /* Ajusta el grosor de la línea según sea necesario */
@@ -513,7 +514,7 @@ img.animate.line-red {
 .sec-3::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 10%; /* Posiciona el punto justo al final de la línea */
     width: 10px; /* Ajusta el tamaño del punto según sea necesario */
     height: 10px; /* Asegura que el punto sea redondo */
@@ -522,9 +523,89 @@ img.animate.line-red {
     transform: translate(-50%, -50%);
 }
 
+.sec-3 .vertical-line {
+    position: absolute;
+    top: calc(15% + 1px);
+    left: 5%;
+    width: 2px;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+
+.sec-3 .horizontal-line {
+    position: absolute;
+    top: calc(30% + 1px + 15%);
+    left: 5%;
+    width: 22.5%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+.sec-3 .second-vertical-line {
+    position: absolute;
+    top: calc(30% + 1px + 15%);
+    left: calc(12.5% + 15%);
+    width: 2px;
+    height: 15%;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+.sec-3 .second-horizontal-line {
+    position: absolute;
+    top: calc(30% + 1px + 15% + 15%);
+    left: calc(12.5% + 15%);
+    width: 22.5%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-50%);
+}
+
+.sec-3 .third-vertical-line {
+    position: absolute;
+    top: calc(30% + 1px + 15% + 15%);
+    left: calc(20% + 15% + 15%);
+    width: 2px;
+    height: 15%;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+.sec-3 .third-horizontal-line {
+    position: absolute;
+    top: calc(30% + 1px + 15% + 15% + 15%); /* Justo debajo de la tercera línea vertical */
+    left: calc(20% + 15% + 15%); /* Posiciona la tercera línea horizontal al final de la tercera línea vertical */
+    width: 22.5%; /* Ajusta el ancho de la tercera línea horizontal */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #fff; /* Color de la línea */
+    transform: translateY(-50%);
+}
+
+.sec-3 .fourth-vertical-line {
+    position: absolute;
+    top: calc(30% + 1px + 15% + 15% + 15%); /* Justo debajo de la tercera línea horizontal */
+    left: calc(27.5% + 15% + 15% + 15%); /* Posiciona la cuarta línea vertical al final de la tercera línea horizontal */
+    width: 2px; /* Ajusta el grosor de la línea según sea necesario */
+    height: 15%; /* Altura de la cuarta línea vertical */
+    background-color: #fff; /* Color de la línea */
+    transform: translateX(-50%);
+}
+
+.sec-3 .fourth-horizontal-line {
+    position: absolute;
+    top: calc(30% + 1px + 15% + 15% + 15% + 15%); /* Justo debajo de la cuarta línea vertical */
+    left: calc(27.5% + 15% + 15% + 15%); /* Posiciona la cuarta línea horizontal al final de la cuarta línea vertical */
+    width: 30%; /* Ajusta el ancho de la cuarta línea horizontal */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #fff; /* Color de la línea */
+    transform: translateY(-50%);
+}
+
 .sec-3-text {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 11%; /* Ajusta este valor según sea necesario para alinear el texto con el punto */
     transform: translateY(-50%);
     color: #fff;
@@ -538,5 +619,5 @@ img.animate.line-red {
 }
 
 .small-text {
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
