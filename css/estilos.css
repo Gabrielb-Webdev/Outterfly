@@ -517,3 +517,56 @@ img.animate.line-red {
 .small-text {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
+
+.image-staircase {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+.image-container-staircase {
+    position: absolute;
+    text-align: center;
+}
+
+.image-container-staircase span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: end;
+}
+
+.image-staircase .image-container-staircase:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.image-staircase .image-container-staircase:nth-child(2) {
+    top: 100px;
+    left: 300px;
+}
+
+.image-staircase .image-container-staircase:nth-child(3) {
+    top: 200px;
+    left: 600px;
+}
+
+.image-staircase .image-container-staircase:nth-child(4) {
+    top: 300px;
+    left: 900px;
+}
+
+.image-staircase .image-container-staircase:nth-child(5) {
+    top: 400px;
+    left: 1200px;
+}
+
+.image-staircase img {
+    max-width: 400px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+    transition: transform 0.3s;
+}
+
+.image-staircase img:hover {
+    transform: scale(1.1);
+}
