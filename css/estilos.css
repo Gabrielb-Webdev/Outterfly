@@ -521,7 +521,7 @@ img.animate.line-red {
 .image-staircase {
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 5%;
 }
 
 .image-container-staircase {
@@ -537,6 +537,99 @@ img.animate.line-red {
     text-align: end;
 }
 
+.border-container {
+    position: relative;
+    display: inline-block;
+}
+
+.border-container::before,
+.border-container::after {
+    content: "";
+    position: absolute;
+    background-color: #fff; /* Color del borde */
+}
+
+/* Estilos generales para el borde */
+.border-container::before {
+    width: 4px; /* Grosor del borde izquierdo */
+    height: 100%; /* Altura del borde izquierdo */
+    left: -10px; /* Separación del borde izquierdo */
+    top: -10px;
+}
+
+.border-container::after {
+    height: 4px; /* Grosor del borde inferior */
+    width: 100%; /* Ancho del borde inferior */
+    bottom: -10px; /* Separación del borde inferior */
+    left: -10px;
+}
+
+/* Estilos específicos para cada imagen */
+.border-1::before {
+    /* Personaliza el borde izquierdo para la imagen 1 */
+    height: 125%; /* Ejemplo */
+    top: -22%;
+}
+
+.border-1::after {
+    /* Personaliza el borde inferior para la imagen 1 */
+    width: 75%; /* Ejemplo */
+}
+
+.border-2::before {
+    /* Personaliza el borde izquierdo para la imagen 2 */
+    height: 45%; /* Ejemplo */
+    top: 59.5%;
+}
+
+.border-2::after {
+    /* Personaliza el borde inferior para la imagen 2 */
+    width: 75%; /* Ejemplo */
+}
+
+.border-3::before {
+    /* Personaliza el borde izquierdo para la imagen 3 */
+    height: 45%; /* Ejemplo */
+    top: 59.5%;
+}
+
+.border-3::after {
+    /* Personaliza el borde inferior para la imagen 3 */
+    width: 75%; /* Ejemplo */
+}
+
+.border-4::before {
+    /* Personaliza el borde izquierdo para la imagen 4 */
+    height: 45%; /* Ejemplo */
+    top: 59.5%;
+}
+
+.border-4::after {
+    /* Personaliza el borde inferior para la imagen 4 */
+    width: 75%; /* Ejemplo */
+}
+
+.border-5::before {
+    /* Personaliza el borde izquierdo para la imagen 5 */
+    height: 45%; /* Ejemplo */
+    top: 59.5%;
+}
+
+.border-5::after {
+    /* Personaliza el borde inferior para la imagen 5 */
+    width: 150%; /* Ejemplo */
+}
+
+.image-staircase img {
+    max-width: 400px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+    transition: transform 0.3s;
+}
+
+.image-staircase img:hover {
+    transform: scale(1.1);
+}
+
+/* Posiciones de las imágenes */
 .image-staircase .image-container-staircase:nth-child(1) {
     top: 0;
     left: 0;
@@ -560,13 +653,4 @@ img.animate.line-red {
 .image-staircase .image-container-staircase:nth-child(5) {
     top: 400px;
     left: 1200px;
-}
-
-.image-staircase img {
-    max-width: 400px; /* Ajusta el tamaño de las imágenes según tus necesidades */
-    transition: transform 0.3s;
-}
-
-.image-staircase img:hover {
-    transform: scale(1.1);
 }
