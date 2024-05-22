@@ -472,22 +472,24 @@ img.animate.line-red {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 100;
     color: #fff;
-    z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+    z-index: 2;
     text-align: center;
+    letter-spacing: 10px;
 }
 
 .card-bottom-image {
     position: absolute;
-    bottom: -45px; /* Ajusta la posición vertical de la imagen */
+    bottom: -40px; /* Ajusta la posición vertical de la imagen */
     left: 50%;
     transform: translateX(-50%);
     z-index: 2; /* Asegura que la imagen esté por encima de la tarjeta */
 }
 
 .bottom-image {
-    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 500px; /* Ajusta el tamaño de la imagen según sea necesario */
 }
 
 .column.is-one-quarter, .column.is-one-quarter-tablet {
@@ -653,4 +655,21 @@ img.animate.line-red {
 .image-staircase .image-container-staircase:nth-child(5) {
     top: 400px;
     left: 1200px;
+}
+
+img.card-image.blur_1 {
+    object-position: 75%;
+}
+
+img.card-image.blur_2 {
+    object-position: 65%;
+}
+
+.card-bottom-image.b_i {
+    width: 150px;
+    bottom: -7%;
+}
+
+img.card-image.blur_4 {
+    object-position: 40%;
 }
