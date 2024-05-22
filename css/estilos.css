@@ -237,6 +237,14 @@ img.animate.red {
     color: #ff0;
 }
 
+.sec-4 {
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.sec-5 {
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
 img.svg-icon.download-icon {
     position: absolute;
     top: 85%;
@@ -613,6 +621,7 @@ img.card-image.blur_4 {
 .smoth:hover {
     transform: scale(1.1); /* Enlarge image on hover */
     animation: smoothScale 0.3s ease-in-out forwards; /* Smooth scaling effect */
+    cursor: pointer;
 }
 
 @keyframes smoothScale {
