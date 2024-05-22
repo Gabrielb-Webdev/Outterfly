@@ -655,24 +655,24 @@ img.card-image.blur_4 {
 
 .sec-4 {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Divide en dos columnas iguales */
+    grid-template-columns: 2fr 1fr; /* Divide en dos columnas con relación 2:1 */
     height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
 }
 
 .left-side {
-    background-image: url('../sources/avance1.jpg'); /* Cambia 'ruta/a/tu/imagen.jpg' por la URL de tu imagen */
+    background-image: url('https://via.placeholder.com/900x800'); /* Cambia 'ruta/a/tu/imagen.jpg' por la URL de tu imagen */
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen */
-    height: 75%; /* Asegura que el div ocupe toda la altura disponible */
+    height: 100%; /* Asegura que el div ocupe toda la altura disponible */
 }
 
 .right-side {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    position: relative;
     right: 46%;
     top: -25%;
     width: 150%;
@@ -684,5 +684,19 @@ img.card-image.blur_4 {
     font-size: 20px;
     font-weight: 100;
     text-align: end;
-    color: #fff ;
+    color: #fff;
+}
+
+.image {
+    position: absolute;
+    top: 175%;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
