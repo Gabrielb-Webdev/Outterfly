@@ -510,6 +510,28 @@ img.animate.line-red {
     font-size: clamp(1rem, 2.5vw, 4rem);
 }
 
+.sec-3-text::before {
+    content: "";
+    position: absolute;
+    left: -45%;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.sec-3-text::after {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #14FCCE;
+    transform: translateY(-50%);
+}
 .sec-3-text .highlight {
     color: #14FCCE; /* Color para la letra destacada */
     font-weight: bold;
