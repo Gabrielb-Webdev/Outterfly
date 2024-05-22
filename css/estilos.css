@@ -549,6 +549,7 @@ img.animate.line-red {
     background-color: #14FCCE;
     transform: translateY(-50%);
 }
+
 .sec-3-text .highlight {
     color: #14FCCE; /* Color para la letra destacada */
     font-weight: bold;
@@ -604,6 +605,28 @@ img.card-image.blur_4 {
     padding: 5px;
     border-radius: 3px;
 }
+
+.image-container:hover {
+    z-index: 10; /* Bring the container to the front on hover */
+}
+
+.smoth:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+    animation: smoothScale 0.3s ease-in-out forwards; /* Smooth scaling effect */
+}
+
+@keyframes smoothScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 
 @media (max-width: 768px) {
     .image-grid {
