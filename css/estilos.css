@@ -653,3 +653,36 @@ img.card-image.blur_4 {
 }
 }
 
+.sec-4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Divide en dos columnas iguales */
+    height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+}
+
+.left-side {
+    background-image: url('../sources/avance1.jpg'); /* Cambia 'ruta/a/tu/imagen.jpg' por la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    height: 75%; /* Asegura que el div ocupe toda la altura disponible */
+}
+
+.right-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    right: 46%;
+    top: -25%;
+    width: 150%;
+}
+
+.right-side p {
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+    line-height: 1.5; /* Espacio entre líneas */
+    font-size: 20px;
+    font-weight: 100;
+    text-align: end;
+    color: #fff ;
+}
