@@ -410,6 +410,7 @@ img.animate.line-red {
     justify-content: flex-start;
     text-align: center;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .centered-text {
@@ -498,7 +499,13 @@ img.animate.line-red {
 
 .sec-3 {
     position: relative;
-    padding: 20px; /* Asegura que el contenido no se superponga con la línea */
+    padding: 20px;
+    background-image: url("../sources/bacetria.png");
+    background-size: 50%;
+    background-position: 75%;
+    background-repeat: no-repeat;
+    /* Evitar que la imagen de fondo se repita */
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo oscuro */
 }
 
 .sec-3-text {
@@ -508,6 +515,16 @@ img.animate.line-red {
     transform: translateY(-50%);
     color: #fff;
     font-size: clamp(1rem, 2.5vw, 4rem);
+}
+
+.sec-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubrir todo el contenedor */
+    height: 100%; /* Cubrir todo el contenedor */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro */
 }
 
 .sec-3-text::before {
