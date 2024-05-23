@@ -34,18 +34,18 @@ body {
 
 /* Estilos para el header */
 header {
-    position: fixed; /* Cambiar de absolute a fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     user-select: none;
     z-index: 100;
-    transition: all 0.3s ease; /* Transición suave */
-    background: transparent; /* Asegurarse de que el fondo sea transparente */
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
 header.scrolled {
