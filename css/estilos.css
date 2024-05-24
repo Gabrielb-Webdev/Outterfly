@@ -955,6 +955,9 @@ img.card-image.blur_4 {
         display: block;
         opacity: 1;
     }
+    .navigation a {
+        top: 10%;
+    }
 }
 
 
