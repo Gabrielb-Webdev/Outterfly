@@ -443,7 +443,7 @@ img.animate.line-red {
 
 .custom-card {
     position: relative; /* Necesario para posicionar el overlay */
-    border-radius: 15px;
+    border-radius: 40px;
     height: 500px;
     overflow: visible; /* Permite que el contenido sobresalga de los bordes redondeados */
     display: flex;
@@ -457,7 +457,7 @@ img.animate.line-red {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para cubrir toda la tarjeta */
     object-position: center; /* Centra la imagen dentro de la tarjeta */
-    border-radius: 15px; /* Asegura que las imágenes sigan los bordes redondeados de la tarjeta */
+    border-radius: 40px; /* Asegura que las imágenes sigan los bordes redondeados de la tarjeta */
 }
 
 .card-overlay {
@@ -489,6 +489,12 @@ img.animate.line-red {
     z-index: 2;
     text-align: center;
     letter-spacing: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-bottom-image {
@@ -504,7 +510,7 @@ img.animate.line-red {
 }
 
 .column.is-one-quarter, .column.is-one-quarter-tablet {
-    width: 15%;
+    width: 17.5%;
 }
 
 .sec-3 {
@@ -581,6 +587,7 @@ img.card-image.blur_2 {
 .card-bottom-image.b_i {
     width: 150px;
     bottom: -7%;
+    left: 10.5em;
 }
 
 img.card-image.blur_4 {
@@ -747,6 +754,18 @@ img.card-image.blur_4 {
     .download-text{
         font-size: 10px;
     }
+
+    .columns {
+        height: 10% !important;
+    }
+
+    .custom-card {
+        height: 25em;
+    }
+
+    .card-logo {
+        width: 5em;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -792,6 +811,28 @@ img.card-image.blur_4 {
     .navigation a {
     font-size: 0.8em;
     }
+
+     .custom-card {
+        height: 20em;
+        width: 15em;
+    }
+
+    .card-bottom-image.b_i {
+        width: 150px;
+        bottom: -2em;
+        left: 7.5em;
+    }
+
+    .columns.is-centered {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .column.is-one-quarter {
+        flex: 0 0 10%;
+        max-width: 25%;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -836,6 +877,16 @@ img.card-image.blur_4 {
 
     .navigation a {
     font-size: 0.7em;
+    }
+
+    .custom-card {
+        height: 15em;
+    }
+
+     .card-bottom-image.b_i {
+        width: 150px;
+        bottom: -2em;
+        left: 6.5em;
     }
 }
 
@@ -890,6 +941,22 @@ img.card-image.blur_4 {
 
     .navigation a {
         font-size: 0.6em;
+    }
+
+
+    .custom-card {
+        height: 10em;
+    }
+
+    .card-bottom-image.b_i {
+        width: 150px;
+        bottom: -2em;
+        left: 6em;
+    }
+
+    .column.is-one-quarter {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 
@@ -955,23 +1022,207 @@ img.card-image.blur_4 {
         display: block;
         opacity: 1;
     }
-    .navigation a {
+
+    .navigation a  {
         top: 10%;
+        font-size: 1em !important;
+    }
+    
+    .container img{
+        width: 5%;
+    }
+    
+    .y {
+        width: 5.5% !important;
+    }
+
+    .o {
+        width: 6.5% !important;
+    }
+
+    .e {
+        width: 4.3% !important;
+    }
+
+    .f {
+        width: 4.3% !important;
+    }
+
+    .l {
+        width: 4.3% !important;
+    }
+
+    .container {
+        top: 45%;
+    }
+
+    .svg-container {
+        display: none;
+    }
+
+    #logo-green {
+        top: -100%;
+        width: 110px;
+        left: 25%;
+    }
+
+    img.animate.green {
+        width: 10px;
+        left: 25%;
+    }
+
+    img.animate.red {
+        width: 10px;
+        right: 24.2%;
+    }
+
+    img.animate.line-red {
+        width: 245px;
+        top: 125%;
+        right: 24.7%;
+    }
+    
+    .download-container .button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .download{
+        width: 50px;
+        height: 50px;
+    }
+
+    .check {
+        width: 50px;
+        height: 50px;
+    }
+
+    .evo {
+        width: 400px;
+    }
+
+    .download-text {
+        font-size: 20px;
+    }
+
+    .navigation a {
+        font-size: 0.6em;
+    }
+    
+    .custom-card {
+        height: 25em;
+    }
+
+    .card-bottom-image.b_i{
+        left: 8.5em;
+    }
+    
+    .column.is-one-quarter.animate {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .column {
+        padding: 1.75em;
     }
 }
 
 
-@media (max-width: 720px) {
-}
+@media (max-width: 815px) {
+    .download-container .button {
+        width: 100px;
+        height: 100px;
+    }
 
-@media (max-width: 600px) {
+    img.animate.line-red {
+        width: 235px;
+        top: 125%;
+        right: 24.7%;
+    }
 }
 
 @media (max-width: 500px) {
+    .container {
+        top: 45%;
+        width: 35em;
+    }
+
+    .svg-container {
+        display: none;
+    }
+
+    #logo-green {
+        top: -2.5em;
+        width: 5em;
+        left: 25%;
+    }
+
+    img.animate.green {
+        width: 0.5em;
+        left: 9.3em;
+    }
+
+    img.animate.red {
+        width: 0.5em;
+        right: 9.2em;
+    }
+
+    img.animate.line-red {
+        width: 9.5em;
+        top: 125%;
+        right: 9.4em;
+    }
+    
+    .download-container .button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .download{
+        width: 30px;
+        height: 30px;
+    }
+
+    .check {
+        width: 30px;
+        height: 30px;
+    }
+
+    .evo {
+        width: 300px;
+    }
+
+    .download-text {
+        font-size: 15px;
+    }
+
+    .navigation a {
+        font-size: 0.6em;
+    }
+    
 }
 
 @media (max-width: 420px) {
 }
 
 @media (max-width: 320px) {
+    .download-container .button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .download{
+        width: 25px;
+        height: 25px;
+    }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .download-text {
+        font-size: 10px;
+    }
 }

@@ -61,7 +61,7 @@ window.onscroll = () => {
   let top = window.scrollY;
 
   sections.forEach(sec => {
-    let offset = sec.offsetTop - 550; // Ajuste de compensación según sea necesario
+    let offset = sec.offsetTop - 500; // Ajuste de compensación según sea necesario
     let height = sec.offsetHeight;
 
     if (top >= offset && top < offset + height) {
