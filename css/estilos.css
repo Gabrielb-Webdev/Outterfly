@@ -783,4 +783,192 @@ img.card-image.blur_4 {
         width: 25px;
         height: 25px;
     }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navigation a {
+    font-size: 0.8em;
+    }
+}
+
+@media (max-width: 1200px) {
+    #logo-green {
+        width: 79px;
+        left: 33.2%;
+    }
+
+    img.animate.green {
+        width: 5px;
+        left: 33.6%;
+    }
+
+    img.animate.red {
+        width: 5px;
+        right: 33.59%;
+    }
+
+    img.animate.line-red {
+        width: 185px;
+        right: 34%;
+    }
+    
+    .download-container .button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .evo {
+        width: 250px;
+    }
+
+    .download{
+        width: 25px;
+        height: 25px;
+    }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navigation a {
+    font-size: 0.7em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container img{
+        width: 2%;
+    }
+
+    #logo-green {
+        width: 58px;
+        left: 36.5%;
+    }
+
+    img.animate.green {
+        width: 4px;
+        left: 36%;
+    }
+
+    img.animate.red {
+        width: 4px;
+        right: 36%;
+    }
+
+    img.animate.line-red {
+        width: 155px;
+        top: 100%;
+        right: 36.5%;
+    }
+    
+    .download-container .button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .download{
+        width: 25px;
+        height: 25px;
+    }
+
+    .check {
+        width: 25px;
+        height: 25px;
+    }
+
+    .evo {
+        width: 200px;
+    }
+
+    .download-text {
+        font-size: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.6em;
+    }
+}
+
+/* Estilos para pantallas menores a 950px */
+@media (max-width: 950px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Oculto fuera de la vista */
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s ease-in-out;
+    }
+
+    nav a {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+        color: white;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
+        background-color: white;
+        transition: background-color 0.3s;
+    }
+
+    nav.open {
+        left: 0; /* Menú visible */
+    }
+
+    /* Estilos para el overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 500;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .overlay.show {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 720px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 500px) {
+}
+
+@media (max-width: 420px) {
+}
+
+@media (max-width: 320px) {
 }
