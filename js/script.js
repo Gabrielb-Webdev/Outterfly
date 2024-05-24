@@ -107,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Aplicar la animación a cada imagen SVG
   createFormingAnimation('#logo-green');
   createFormingAnimation('.green', 200);
-  createFormingAnimation('.circular', 400);
   createFormingAnimation('.animate:nth-child(4)', 600); // U
   createFormingAnimation('.animate:nth-child(5)', 800); // T ABAJO
   createFormingAnimation('.animate:nth-child(6)', 1000); // T ARRIBA
