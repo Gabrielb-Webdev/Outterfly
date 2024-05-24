@@ -898,7 +898,7 @@ img.card-image.blur_4 {
     nav {
         display: flex;
         flex-direction: column;
-        background-color: #333;
+        background-color: transparent;
         position: fixed;
         top: 0;
         left: -500px; /* Oculto fuera de la vista */
@@ -910,7 +910,7 @@ img.card-image.blur_4 {
 
     nav a {
         padding: 15px;
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid transparent;
         color: white;
         text-align: center;
     }
