@@ -1212,6 +1212,25 @@ img.card-image.blur_4 {
 }
 
 @media (max-width: 420px) {
+    .custom-card {
+        height: 10em;
+    }
+
+    .card-bottom-image.b_i{
+        left: 5em;
+        width: 7em;
+    }
+}
+
+@media (max-width: 400px) {
+    .custom-card {
+        height: 9em;
+    }
+
+    .card-bottom-image.b_i{
+        left: 5em;
+        width: 7em;
+    }
 }
 
 @media (max-width: 320px) {
