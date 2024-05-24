@@ -1201,6 +1201,14 @@ img.card-image.blur_4 {
         font-size: 0.6em;
     }
     
+    .custom-card {
+        height: 12em;
+    }
+
+     .card-bottom-image.b_i{
+        left: 6em;
+        width: 8em;
+    }
 }
 
 @media (max-width: 420px) {
