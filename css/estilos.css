@@ -713,8 +713,12 @@ img.card-image.blur_4 {
     right: 10em;
 }
 
+.column.is-one-quarter.animate:hover {
+    cursor: pointer;
+}
+
 button.modal-close.is-large {
-    top: 8em;
+    top: 7em;
 }
 
 /* Media query para el contenedor principal */

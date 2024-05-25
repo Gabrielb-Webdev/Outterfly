@@ -176,7 +176,7 @@
                         angle: { 0: 360 },
                         opacity: { 0: 1 },
                         scale: { 0.5: 1 },
-                        duration: 400,
+                        duration: 500,
                         easing: 'cubic.out'
                     }).play();
 
@@ -188,14 +188,6 @@
                 close.addEventListener('click', () => {
                     const modal = close.closest('.modal');
                     modal.classList.remove('is-active');
-                });
-            });
-
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.addEventListener('click', (event) => {
-                    if (event.target.classList.contains('modal-background')) {
-                        modal.classList.remove('is-active');
-                    }
                 });
             });
         });
