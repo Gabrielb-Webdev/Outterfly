@@ -1393,6 +1393,10 @@ img.card-image.blur_4 {
         left: 5em;
         width: 7em;
     }
+
+    .right-side p {
+        width: 26em;
+    }
 }
 
 @media (max-width: 400px) {
@@ -1410,7 +1414,7 @@ img.card-image.blur_4 {
     }
     
     .right-side p {
-        width: 27em;
+        width: 26em;
     }
 }
 
@@ -1462,5 +1466,21 @@ img.card-image.blur_4 {
 
     .image-text {
         top: -80px;
+    }
+
+    .right-side {
+        width: 0em;
+        top: -10em;
+        right: 5em;
+    }
+
+    .right-side p {
+        width: 25em;
+    }
+
+    .image img {
+        max-width: 85%;
+        top: -5em;
+        right: -4em;
     }
 }
