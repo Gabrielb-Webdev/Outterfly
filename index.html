@@ -158,41 +158,6 @@
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.custom-card');
-            const modalCloses = document.querySelectorAll('.modal-close');
-
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const target = card.getAttribute('data-target');
-                    const modal = document.getElementById(target);
-
-                    // Animate the modal
-                    const modalContent = modal.querySelector('.modal-content');
-                    new mojs.Html({
-                        el: modalContent,
-                        angle: { 0: 360 },
-                        opacity: { 0: 1 },
-                        scale: { 0.5: 1 },
-                        duration: 500,
-                        easing: 'cubic.out'
-                    }).play();
-
-                    modal.classList.add('is-active');
-                });
-            });
-
-            modalCloses.forEach(close => {
-                close.addEventListener('click', () => {
-                    const modal = close.closest('.modal');
-                    modal.classList.remove('is-active');
-                });
-            });
-        });
-    </script>
-
 </section>
 
     </section>
@@ -243,8 +208,11 @@
 
 
     <section id="sec-5" class="sec-5">
-        <h1 class="animate">Hi, test</h1>
-        <p class="animate">test testtesttest testtesttest testtesttest css</p>
+        <p class="animate">ACOMPÁÑANOS</p>
+        <p class="animate">A DESCUBRIR LAS</p>
+        <p class="animate">RESPUESTAS DE LA</p>
+        <p class="animate">VIDA EN EL UNIVERSO.</p>
+        
     </section>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>

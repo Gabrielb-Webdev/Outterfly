@@ -721,6 +721,49 @@ button.modal-close.is-large {
     top: 7em;
 }
 
+#sec-5 {
+    position: relative; /* Necesario para la pseudo-clase ::before */
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    color: white; /* Cambia el color del texto para que contraste con el fondo */
+    overflow: hidden; /* Asegura que la pseudo-clase no se desborde */
+}
+#sec-5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../sources/planettttt.png');
+    background-size: cover; /* Ajusta la imagen para que cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    z-index: 1; /* Coloca la imagen detrás del contenido */
+    opacity: 0.5; /* Ajusta la opacidad para oscurecer */
+}
+#sec-5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposición negra con opacidad */
+    z-index: 2; /* Coloca la superposición detrás del contenido */
+}
+#sec-5 > * {
+    position: relative; /* Necesario para que el contenido esté encima de las pseudo-clases */
+    z-index: 3; /* Coloca el contenido encima de la imagen y la superposición */
+}
+
+.sec-5 p {
+    position: absolute;
+    top: 2em;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    line-height: 1;
+}
+
 /* Media query para el contenedor principal */
 @media (max-width: 1800px) {
     .container img {
