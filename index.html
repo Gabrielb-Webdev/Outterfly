@@ -70,7 +70,7 @@
     </div>
     <div class="columns is-centered">
         <div class="column is-one-quarter animate" style="--animation-order: 1;">
-            <div class="card custom-card">
+            <div class="card custom-card" data-target="modal1">
                 <div class="card-overlay">
                     <img src="sources/logooutterflywhite.png" alt="Logo" class="card-logo">
                 </div>
@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="column is-one-quarter animate" style="--animation-order: 2;">
-            <div class="card custom-card">
+            <div class="card custom-card" data-target="modal2">
                 <div class="card-overlay">
                     <img src="sources/logooutterflywhite.png" alt="Logo" class="card-logo">
                 </div>
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="column is-one-quarter animate" style="--animation-order: 3;">
-            <div class="card custom-card">
+            <div class="card custom-card" data-target="modal3">
                 <div class="card-overlay">
                     <img src="sources/logooutterflywhite.png" alt="Logo" class="card-logo">
                 </div>
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="column is-one-quarter animate" style="--animation-order: 4;">
-            <div class="card custom-card">
+            <div class="card custom-card" data-target="modal4">
                 <div class="card-overlay">
                     <img src="sources/logooutterflywhite.png" alt="Logo" class="card-logo">
                 </div>
@@ -120,6 +120,87 @@
             </div>
         </div>
     </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p>Content for the first modal.</p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p>Content for the second modal.</p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p>Content for the third modal.</p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p>Content for the fourth modal.</p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.custom-card');
+            const modalCloses = document.querySelectorAll('.modal-close');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const target = card.getAttribute('data-target');
+                    const modal = document.getElementById(target);
+
+                    // Animate the modal
+                    const modalContent = modal.querySelector('.modal-content');
+                    new mojs.Html({
+                        el: modalContent,
+                        angle: { 0: 360 },
+                        opacity: { 0: 1 },
+                        scale: { 0.5: 1 },
+                        duration: 400,
+                        easing: 'cubic.out'
+                    }).play();
+
+                    modal.classList.add('is-active');
+                });
+            });
+
+            modalCloses.forEach(close => {
+                close.addEventListener('click', () => {
+                    const modal = close.closest('.modal');
+                    modal.classList.remove('is-active');
+                });
+            });
+
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('modal-background')) {
+                        modal.classList.remove('is-active');
+                    }
+                });
+            });
+        });
+    </script>
+
 </section>
 
     </section>

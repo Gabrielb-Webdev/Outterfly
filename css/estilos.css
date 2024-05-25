@@ -713,6 +713,10 @@ img.card-image.blur_4 {
     right: 10em;
 }
 
+button.modal-close.is-large {
+    top: 8em;
+}
+
 /* Media query para el contenedor principal */
 @media (max-width: 1800px) {
     .container img {
@@ -1396,6 +1400,12 @@ img.card-image.blur_4 {
 
     .right-side p {
         width: 26em;
+    }
+
+    .image img {
+        max-width: 85%;
+        top: 9em;
+        right: -4em;
     }
 }
 
