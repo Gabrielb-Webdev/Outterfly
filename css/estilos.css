@@ -784,7 +784,7 @@ img.card-image.blur_4 {
     height: 100%;
 }
 
-.custom-box {
+.custom-box-1  {
     width: 50vw; /* Adjust the width as needed */
     height: 70vh; /* Adjust the height as needed */
     max-width: 90%; /* Ensures responsiveness */
@@ -792,6 +792,39 @@ img.card-image.blur_4 {
     overflow: auto; /* Adds scroll if content exceeds the box */
     border-radius: 5em;
     background: url(../sources/avance1.jpg);
+    background-size: cover;
+}
+
+.custom-box-2  {
+    width: 50vw; /* Adjust the width as needed */
+    height: 70vh; /* Adjust the height as needed */
+    max-width: 90%; /* Ensures responsiveness */
+    max-height: 80%; /* Ensures responsiveness */
+    overflow: auto; /* Adds scroll if content exceeds the box */
+    border-radius: 5em;
+    background: url(../sources/backblur2.jpg);
+    background-size: cover;
+}
+
+.custom-box-3  {
+    width: 50vw; /* Adjust the width as needed */
+    height: 70vh; /* Adjust the height as needed */
+    max-width: 90%; /* Ensures responsiveness */
+    max-height: 80%; /* Ensures responsiveness */
+    overflow: auto; /* Adds scroll if content exceeds the box */
+    border-radius: 5em;
+    background: url(../sources/avance3.png);
+    background-size: cover;
+}
+
+.custom-box-4  {
+    width: 50vw; /* Adjust the width as needed */
+    height: 70vh; /* Adjust the height as needed */
+    max-width: 90%; /* Ensures responsiveness */
+    max-height: 80%; /* Ensures responsiveness */
+    overflow: auto; /* Adds scroll if content exceeds the box */
+    border-radius: 5em;
+    background: url(../sources/avance4.jpg);
     background-size: cover;
 }
 
