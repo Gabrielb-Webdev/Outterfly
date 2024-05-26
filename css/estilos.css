@@ -8,6 +8,8 @@
     --bulma-skeleton-line-height: 0.75em;
   }
 
+ 
+
 /* Ocultar la barra de desplazamiento en navegadores webkit (Chrome, Safari) */
 body::-webkit-scrollbar {
     display: none;
@@ -717,10 +719,6 @@ img.card-image.blur_4 {
     cursor: pointer;
 }
 
-button.modal-close.is-large {
-    top: 7em;
-}
-
 #sec-5 {
     position: relative; /* Necesario para la pseudo-clase ::before */
     height: 100vh; /* Ajusta la altura según tus necesidades */
@@ -762,6 +760,30 @@ button.modal-close.is-large {
     font-size: 4em;
     letter-spacing: 0.15em;
     line-height: 1;
+}
+
+.m-1 {
+    background: url(../sources/backblur1.jpg);
+    background-size: cover;
+}
+
+.m-2 {
+    background: url(../sources/backblur2.jpg);
+    background-size: cover;
+}
+
+.m-3 {
+    background: url(../sources/backblur3.jpg);
+    background-size: cover;
+}
+
+.m-4 {
+    background: url(../sources/backblur4.jpg);
+    background-size: cover;
+}
+
+.modal {
+    z-index: 10000;
 }
 
 /* Media query para el contenedor principal */

@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.custom-card');
   const modalCloses = document.querySelectorAll('.modal-close');
+  const html = document.documentElement;
 
   cards.forEach(card => {
       card.addEventListener('click', () => {
@@ -186,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }).play();
 
           modal.classList.add('is-active');
+          html.style.overflow = 'hidden';
       });
   });
 
@@ -193,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       close.addEventListener('click', () => {
           const modal = close.closest('.modal');
           modal.classList.remove('is-active');
+          html.style.overflow = '';
       });
   });
 });
