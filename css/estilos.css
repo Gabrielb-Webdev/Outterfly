@@ -767,6 +767,34 @@ img.card-image.blur_4 {
     background-size: cover;
 }
 
+.custom-modal-image {
+    position: absolute;
+    top: 6em;
+    left: 35em;
+    transform: translateX(-50%);
+    max-width: 15em;
+    height: auto;
+    z-index: 1000;
+}
+
+.is-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.custom-box {
+    width: 50vw; /* Adjust the width as needed */
+    height: 70vh; /* Adjust the height as needed */
+    max-width: 90%; /* Ensures responsiveness */
+    max-height: 80%; /* Ensures responsiveness */
+    overflow: auto; /* Adds scroll if content exceeds the box */
+    border-radius: 5em;
+    background: url(../sources/avance1.jpg);
+    background-size: cover;
+}
+
 .m-2 {
     background: url(../sources/backblur2.jpg);
     background-size: cover;
@@ -784,6 +812,30 @@ img.card-image.blur_4 {
 
 .modal {
     z-index: 10000;
+}
+
+.box-content-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.modal-title {
+    color: white;
+    font-weight: 100;
+    font-size: 0.75em;
+    letter-spacing: 10px;
+    margin-top: 5em;
+}
+
+.modal-text {
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1em;
+    margin-top: 10em;
+    text-align: justify;
 }
 
 /* Media query para el contenedor principal */
