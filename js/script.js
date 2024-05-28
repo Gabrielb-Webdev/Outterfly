@@ -200,27 +200,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const sections = document.querySelectorAll('section');
-            let isScrolling = false;
-
-            function scrollToSection(index) {
-                sections[index].scrollIntoView({ behavior: 'smooth' });
-            }
-
-            window.addEventListener('wheel', (event) => {
-                if (isScrolling) return;
-                isScrolling = true;
-
-                const currentSectionIndex = Math.round(window.scrollY / window.innerHeight);
-                if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-                    scrollToSection(currentSectionIndex + 1);
-                } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-                    scrollToSection(currentSectionIndex - 1);
-                }
-
-                setTimeout(() => {
-                    isScrolling = false;
-                }, 1000);
-            });
-        });
