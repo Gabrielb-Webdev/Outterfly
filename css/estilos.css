@@ -19,6 +19,16 @@ html {
     scroll-behavior: smooth;
 }
 
+            body,
+            html {
+                scroll-behavior: smooth;
+                overflow: hidden;
+            }
+        
+            section {
+                scroll-snap-align: start;
+            }
+
 /* Reset básico y configuración de fuente */
 * {
     margin: 0;
