@@ -19,15 +19,15 @@ html {
     scroll-behavior: smooth;
 }
 
-            body,
-            html {
-                scroll-behavior: smooth;
-                overflow: hidden;
-            }
-        
-            section {
-                scroll-snap-align: start;
-            }
+body,
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+section {
+    scroll-snap-align: start;
+}
 
 /* Reset básico y configuración de fuente */
 * {
@@ -879,6 +879,24 @@ img.card-image.blur_4 {
     font-size: 1em;
     margin-top: 10em;
     text-align: justify;
+}
+
+#sec-5 p.animate {
+    color: #fff; /* Puedes cambiar este color por el que desees */
+    font-size: calc(1.5em + 1vw); /* Ajusta estos valores según tu preferencia */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para la letra "V" */
+#sec-5 p.animate .highlight-v {
+    color: #14FCCE; /* Color para la letra "V" */
+}
+
+ /* Estilo para la letra "U" */
+#sec-5 p.animate .highlight-u {
+    color: #E10B62; /* Color para la letra "U" */
 }
 
 /* Media query para el contenedor principal */
