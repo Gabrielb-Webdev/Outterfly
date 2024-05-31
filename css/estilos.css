@@ -177,7 +177,7 @@ section.show-animate .animate {
     gap: 1vw; /* Espacio entre los SVG en unidades relativas */
     position: absolute; /* Para posicionar dentro de la sección */
     right: 1vw; /* Alinear a la derecha en unidades relativas */
-    top: 44%; /* Centrar verticalmente */
+    top: 48%; /* Centrar verticalmente */
     transform: translateY(-50%); /* Ajuste adicional para centrar */
     user-select: none;
 }
@@ -194,7 +194,7 @@ img.animate.red {
 }
 
 .svg-icon {
-    width: 1.25vw; /* Ajustar el tamaño según sea necesario usando unidades relativas */
+    width: 0.75vw; /* Ajustar el tamaño según sea necesario usando unidades relativas */
     height: auto;
 }
 
@@ -896,13 +896,13 @@ img.card-image.blur_4 {
     }
 
     #logo-green {
-        width: 80px;
+        width: 95px;
         left: 36%;
     }
 
     img.animate.green {
         width: 5px;
-        left: 35.7%;
+        left: 36%;
     }
 
     img.animate.red {
@@ -953,6 +953,22 @@ img.card-image.blur_4 {
         top: -5em;
         right: 10em;
     }
+
+    img.animate.o {
+        width: 2.1em;
+    }
+
+    img.animate.e {
+        width: 1.4em;
+    }
+    
+    img.animate.f {
+        width: 1.35em;
+    }
+
+    img.animate.l {
+        width: 1.4em;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -961,13 +977,13 @@ img.card-image.blur_4 {
     }
 
     #logo-green {
-        width: 80px;
+        width: 90px;
         left: 35%;
     }
 
     img.animate.green {
         width: 5px;
-        left: 34.8%;
+        left: 35.2%;
     }
 
     img.animate.red {
@@ -976,7 +992,7 @@ img.card-image.blur_4 {
     }
 
     img.animate.line-red {
-        width: 200px;
+        width: 195px;
         right: 35%;
     }
     
