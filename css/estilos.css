@@ -969,6 +969,14 @@ img.card-image.blur_4 {
     img.animate.l {
         width: 1.4em;
     }
+
+    .custom-box-1 {
+        overflow: hidden;
+    }
+
+    .modal-text {
+        margin-top: 5em;
+    }
 }
 
 @media (max-width: 1400px) {
