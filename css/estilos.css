@@ -1061,6 +1061,11 @@ img.card-image.blur_4 {
     .right-side p {
         font-size: 0.8em;
     }
+
+    .modal-text {
+        margin-top: 7.5em;
+        font-size: 0.7em;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1201,6 +1206,11 @@ img.card-image.blur_4 {
     .column.is-one-quarter {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+
+    .modal-text {
+        margin-top: 5em;
+        font-size: 0.6em;
     }
 }
 
