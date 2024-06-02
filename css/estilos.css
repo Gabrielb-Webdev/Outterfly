@@ -1513,6 +1513,11 @@ img.card-logo.cl1 {
     .right-side p {
         font-size: 1em;
     }
+
+    #sec-5::before {
+        width: 100%;
+        height: 75%;
+    }
 }
 @media (max-width: 835px) {
     nav {
