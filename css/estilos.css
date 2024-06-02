@@ -125,6 +125,7 @@ section .animate {
 
 section.show-animate .animate {
     filter: blur(0);
+    user-select: none;
 }
 
 /* Estilos específicos para sec-1 */
@@ -713,6 +714,7 @@ img.card-image.blur_4 {
     height: auto;
     top: -2em;
     right: 10em;
+    user-select: none;
 }
 
 .column.is-one-quarter.animate:hover {
@@ -930,8 +932,9 @@ img.card-image.blur_4 {
 
 .custom-modal-content img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio of images */
+    height: auto;
     display: block;
+    user-select: none;
 }
 
 .modal-close {
