@@ -2082,6 +2082,10 @@ img.card-logo.cl1 {
     .modal-text {
         font-size: 0.55em;
     }
+
+    .custom-modal-content {
+        width: 90%;
+    }
 }
 
 @media (max-width: 400px) {
