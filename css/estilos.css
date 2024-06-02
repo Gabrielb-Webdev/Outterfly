@@ -2078,6 +2078,10 @@ img.card-logo.cl1 {
         top: 9em;
         right: -4em;
     }
+
+    .modal-text {
+        font-size: 0.55em;
+    }
 }
 
 @media (max-width: 400px) {
@@ -2114,7 +2118,7 @@ img.card-logo.cl1 {
 
     .modal-text {
         margin-top: 5em;
-        font-size: 0.59em;
+        font-size: 0.55em;
     }
 
     .modal-title {
@@ -2125,7 +2129,7 @@ img.card-logo.cl1 {
 
 @media (max-width: 380px) {
     .modal-text {
-        font-size: 0.57em;
+        font-size: 0.55em;
     }
 }
 
