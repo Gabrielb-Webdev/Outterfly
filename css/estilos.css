@@ -800,6 +800,7 @@ img.card-image.blur_4 {
     background: url(../sources/backblur1.jpg);
     background-size: 120em;
     background-position: -55em;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 40px 80px rgba(0, 0, 0, 0.65);
 }
 
 .custom-box-2 {
@@ -812,6 +813,7 @@ img.card-image.blur_4 {
     background: url(../sources/backblur2.jpg);
     background-size: cover;
     background-position: -25em;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 40px 80px rgba(0, 0, 0, 0.65);
 }
 
 .custom-box-3  {
@@ -823,6 +825,7 @@ img.card-image.blur_4 {
     border-radius: 5em;
     background: url(../sources/backblur3.jpg);
     background-size: cover;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 40px 80px rgba(0, 0, 0, 0.65);
 }
 
 .custom-box-4 {
@@ -835,6 +838,7 @@ img.card-image.blur_4 {
     background: url(../sources//backblur4.jpg);
     background-size: 125em;
     background-position: -65em;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 40px 80px rgba(0, 0, 0, 0.65);
 }
 
 .m-2 {
