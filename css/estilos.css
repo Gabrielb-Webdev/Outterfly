@@ -1533,11 +1533,13 @@ img.card-logo.cl1 {
     .custom-box-1 {
         width: 75vw;
         height: 70vh;
+        background-position: -65em;
     }
 
     .custom-box-2 {
         width: 75vw;
         height: 70vh;
+        background-position: -60em;
     }
 
     .custom-box-3 {
@@ -1805,6 +1807,10 @@ img.card-logo.cl1 {
         font-size: 1em;
         font-weight: 100;
     }
+
+    .custom-box-2 {
+        background-position: -70em;
+    }
 }
 
 @media (max-width: 799px) {
@@ -1877,6 +1883,14 @@ img.card-logo.cl1 {
     .box-content-image {
         position: relative;
         top: 2.5em;
+    }
+
+    .custom-box-1 {
+        background-position: -65em;
+    }
+
+    .custom-box-2 {
+        background-position: -45em;
     }
 }
 
@@ -2032,8 +2046,16 @@ img.card-logo.cl1 {
     }
     
     .modal-title {
-        margin-top: 5em;
+        margin-top: 7.5em;
         font-size: 0.8em;
+    }
+
+    .custom-box-1 {
+        background-position: -75em;
+    }
+
+    .custom-box-2 {
+        background-position: -45em;
     }
 }
 
@@ -2084,6 +2106,26 @@ img.card-logo.cl1 {
     img.animate.red {
         width: 0.4em;
         right: 9.15em;
+    }
+
+    .custom-box-2 {
+        background-position: -37.5em;
+    }
+
+    .modal-text {
+        margin-top: 5em;
+        font-size: 0.59em;
+    }
+
+    .modal-title {
+        margin-top: 7.5em;
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 380px) {
+    .modal-text {
+        font-size: 0.57em;
     }
 }
 
