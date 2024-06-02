@@ -1040,6 +1040,15 @@ img.card-logo.cl1 {
     .custom-box-1 {
         overflow: hidden;
     }
+    .custom-box-2 {
+        overflow: hidden;
+    }
+    .custom-box-3 {
+        overflow: hidden;
+    }
+    .custom-box-4 {
+        overflow: hidden;
+    }
 
     .modal-text {
         margin-top: 5em;
