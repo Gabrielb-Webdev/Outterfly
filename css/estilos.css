@@ -889,6 +889,51 @@ img.card-image.blur_4 {
     color: #E10B62; /* Color para la letra "U" */
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal.is-active {
+    display: flex; /* Use flex to center content */
+}
+
+.custom-modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 60%; /* Adjust the width as needed */
+    max-width: 1200px;
+    max-height: 80%; /* Adjust max height to keep image within view */
+    overflow: auto;
+    border-radius: 8px; /* Rounded corners for better aesthetics */
+}
+
+.custom-modal-content img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio of images */
+    display: block;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+
 /* Media query para el contenedor principal */
 @media (max-width: 1800px) {
     .container img {

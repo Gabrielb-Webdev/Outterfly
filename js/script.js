@@ -167,27 +167,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.custom-card');
+  const images = document.querySelectorAll('.image-container img');
   const modalCloses = document.querySelectorAll('.modal-close');
   const html = document.documentElement;
+
+  const openModal = (target) => {
+      const modal = document.getElementById(target);
+
+      // Animate the modal
+      const modalContent = modal.querySelector('.modal-content');
+      new mojs.Html({
+          el: modalContent,
+          angle: { 0: 360 },
+          opacity: { 0: 1 },
+          scale: { 0.5: 1 },
+          duration: 500,
+          easing: 'cubic.out'
+      }).play();
+
+      modal.classList.add('is-active');
+      html.style.overflow = 'hidden';
+  };
 
   cards.forEach(card => {
       card.addEventListener('click', () => {
           const target = card.getAttribute('data-target');
-          const modal = document.getElementById(target);
+          openModal(target);
+      });
+  });
 
-          // Animate the modal
-          const modalContent = modal.querySelector('.modal-content');
-          new mojs.Html({
-              el: modalContent,
-              angle: { 0: 360 },
-              opacity: { 0: 1 },
-              scale: { 0.5: 1 },
-              duration: 500,
-              easing: 'cubic.out'
-          }).play();
-
-          modal.classList.add('is-active');
-          html.style.overflow = 'hidden';
+  images.forEach(image => {
+      image.addEventListener('click', () => {
+          const target = image.getAttribute('data-target');
+          openModal(target);
       });
   });
 
@@ -199,4 +211,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
 
