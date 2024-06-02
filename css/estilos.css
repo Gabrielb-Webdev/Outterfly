@@ -1323,6 +1323,10 @@ img.card-logo.cl1 {
         text-align: center;
     }
 
+    header.scrolled {
+        background-color: transparent;
+    }
+
     .menu-toggle {
         display: block;
         position: fixed;
@@ -1863,6 +1867,8 @@ img.card-logo.cl1 {
 
     .card-text {
         left: 53%;
+        top: 55%;
+        font-size: 0.5rem;
     }
     
     .sec-3-text {
@@ -1910,6 +1916,19 @@ img.card-logo.cl1 {
         max-width: 85%;
         top: 10em;
         right: -4em;
+    }
+
+    .sec-1 {
+        background-size: 375%;
+        background-repeat:space;
+        background-position: center;
+        background-attachment: fixed;
+        background-position-x: center;
+    }
+
+    #sec-5::before {    
+        width: 100%;
+        height: 50%;
     }
 }
 
