@@ -1215,7 +1215,7 @@ img.card-image.blur_4 {
 }
 
 /* Estilos para pantallas menores a 950px */
-@media (max-width: 950px) {
+@media (max-width: 970px) {
     nav {
         display: flex;
         flex-direction: column;
