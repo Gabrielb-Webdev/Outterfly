@@ -1930,6 +1930,14 @@ img.card-logo.cl1 {
         width: 100%;
         height: 50%;
     }
+
+    #sec-5 p.animate {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: clamp(1em, 2.2em + 1.8vw, 1.5em);
+    }
 }
 
 @media (max-width: 420px) {
