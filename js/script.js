@@ -42,16 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const button = document.querySelector('.button');
+const button = document.querySelector('.download-button');
 
-button.addEventListener('click', function() {
+button.addEventListener('click', function () {
     button.classList.remove('done');
     button.classList.add('download');
-    setTimeout(function() {
+
+    setTimeout(function () {
         button.classList.remove('download');
         button.classList.add('done');
-    }, 3000);
+
+        const fileUrl = button.getAttribute('data-file');
+        const a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = fileUrl.split('/').pop();
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }, 3000); // La duración de tu animación en milisegundos
 });
+
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.navigation a');
