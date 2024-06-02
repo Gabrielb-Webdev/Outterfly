@@ -886,6 +886,7 @@ img.card-image.blur_4 {
     padding: 0;
     text-align: center;
     font-size: clamp(1.8em, 2.2em + 1.8vw, 6em);
+    font-weight: bold;
 }
 
 /* Estilo para la letra "V" */
@@ -1042,6 +1043,20 @@ img.card-logo.cl1 {
 
     .modal-text {
         margin-top: 5em;
+    }
+}
+
+@media (max-width: 1550px) {
+    .modal-text {
+        margin-top: 2em;
+    }
+
+    .columns:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .centered-text {
+        margin: 15vh 0 0 0;
     }
 }
 
@@ -1844,13 +1859,13 @@ img.card-logo.cl1 {
 
     .right-side {
         right: 18em;
-        top: -22em;
+        top: -15em;
         width: 200%;
     }
 
     .image img {
         max-width: 85%;
-        top: 9em;
+        top: 1em;
         right: 0em;
     }
     .image-grid {
@@ -1991,7 +2006,7 @@ img.card-logo.cl1 {
 
     .right-side {
         width: 0em;
-        top: -17em;
+        top: -14em;
         right: 5em;
     }
 
@@ -2042,7 +2057,7 @@ img.card-logo.cl1 {
 
     .modal-text {
         margin-top: 5em;
-        font-size: 0.7em;
+        font-size: 0.65em;
     }
     
     .modal-title {
@@ -2075,7 +2090,7 @@ img.card-logo.cl1 {
 
     .image img {
         max-width: 85%;
-        top: 9em;
+        top: 6em;
         right: -4em;
     }
 
