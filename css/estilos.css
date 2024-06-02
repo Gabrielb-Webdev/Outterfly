@@ -245,10 +245,6 @@ img.animate.red {
     background-color: rgba(0, 0, 0, 0.9)
 }
 
-.sec-5 {
-    background-color: rgba(0, 0, 0, 0.9)
-}
-
 img.svg-icon.download-icon {
     position: absolute;
     top: 85%;
@@ -1522,6 +1518,45 @@ img.card-logo.cl1 {
         width: 100%;
         height: 75%;
     }
+
+    .modal-text {
+        margin-top: 7.5em;
+        font-size: 1em;
+    }
+
+    .modal-title {
+        margin-top: 7.5em;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .custom-box-1 {
+        width: 75vw;
+        height: 70vh;
+    }
+
+    .custom-box-2 {
+        width: 75vw;
+        height: 70vh;
+    }
+
+    .custom-box-3 {
+        width: 75vw;
+        height: 70vh;
+    }
+
+    .custom-box-4 {
+        width: 75vw;
+        height: 70vh;
+    }
+
+    .box-content-image {
+        position: relative;
+        top: 2.5em;
+        width: 15em;
+    }
+
+   
 }
 @media (max-width: 835px) {
     nav {
@@ -1745,6 +1780,31 @@ img.card-logo.cl1 {
         width: 285px;
     }
 
+    .box-content-image {
+        position: relative;
+        top: 2.5em;
+    }
+
+}
+
+@media (max-width: 801px) {
+    .modal-title {
+        margin-top: 10em;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .box-content-image {
+        position: relative;
+        top: 5em;
+        width: 15em;
+    }
+
+    .modal-text {
+        margin-top: 10em;
+        font-size: 1em;
+        font-weight: 100;
+    }
 }
 
 @media (max-width: 799px) {
@@ -1803,6 +1863,20 @@ img.card-logo.cl1 {
     
         .l {
         width: 4.4% !important;
+    }
+
+    .modal-text {
+        margin-top: 5em;
+        font-size: 1em;
+    }
+
+    .modal-title {
+        margin-top: 4em;
+    }
+
+    .box-content-image {
+        position: relative;
+        top: 2.5em;
     }
 }
 
@@ -1946,6 +2020,20 @@ img.card-logo.cl1 {
         padding: 0;
         text-align: center;
         font-size: clamp(1em, 2.2em + 1.8vw, 1.5em);
+    }
+
+    .box-content-image {
+        width: 10em;
+    }
+
+    .modal-text {
+        margin-top: 5em;
+        font-size: 0.7em;
+    }
+    
+    .modal-title {
+        margin-top: 5em;
+        font-size: 0.8em;
     }
 }
 
