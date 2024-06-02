@@ -1,9 +1,9 @@
 agrandar imagenes en la seccion de avances al darle click ✔
-corregir el tamaño de la tipografias en lis distintos tamaños del logo
-achicar las felchas de la primera seccion
-eliminar la ciano bacteria en el modal y hacer que sea responsive
-en la ultima seccion todo va en bold y darle mas brillo o visibilidad al fondo, ajustar que sea del mismo tamaño que el pdf el texto
-proyecto y avances blanco thing y colores bold
-agregar a las card de proyectos los numeros
-mover mas al centro en la seccion de ciencia
-y evitar que la navbar choque con los contenidos
+corregir el tamaño de la tipografias en lo  s distintos tamaños del logo ✔
+achicar las felchas de la primera seccion ✔
+eliminar la ciano bacteria en el modal y hacer que sea responsive ✔
+en la ultima seccion todo va en bold y darle mas brillo o visibilidad al fondo, ajustar que sea del mismo tamaño que el pdf el texto ✔
+proyecto y avances blanco thing y colores bold ✔
+agregar a las card de proyectos los numeros 
+mover mas al centro en la seccion de ciencia ✔
+y evitar que la navbar choque con los contenidos ✔

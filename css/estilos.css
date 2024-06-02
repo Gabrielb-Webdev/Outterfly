@@ -51,8 +51,8 @@ header {
 }
 
 header.scrolled {
-    padding: 30px 100px; /* Reducir el padding cuando se desplaza */
-    background: transparent; /* Mantener el fondo transparente */
+    padding: 30px 100px;
+    background-color: #121212;
 }
 
 .logo {
@@ -528,8 +528,8 @@ img.animate.line-red {
 
 .sec-3-text {
     position: absolute;
-    top: 10%;
-    left: 11%; /* Ajusta este valor según sea necesario para alinear el texto con el punto */
+    top: 15%;
+    left: 11%;
     transform: translateY(-50%);
     color: #fff;
     font-size: clamp(1rem, 2.5vw, 4rem);
@@ -576,6 +576,7 @@ img.animate.line-red {
 
 .small-text {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 100;
 }
 
 img.card-image.blur_1 {
@@ -600,7 +601,9 @@ img.card-image.blur_4 {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    gap: 10px; /* Space between images */
+    gap: 10px;
+    position: relative;
+    top: 5em;
 }
 
 .image-container {
@@ -623,6 +626,7 @@ img.card-image.blur_4 {
     font-size: 12px;
     padding: 5px;
     border-radius: 3px;
+    font-weight: 100;
 }
 
 .image-container:hover {
@@ -786,26 +790,28 @@ img.card-image.blur_4 {
     height: 100%;
 }
 
-.custom-box-1  {
-    width: 50vw; /* Adjust the width as needed */
-    height: 70vh; /* Adjust the height as needed */
-    max-width: 90%; /* Ensures responsiveness */
-    max-height: 80%; /* Ensures responsiveness */
-    overflow: auto; /* Adds scroll if content exceeds the box */
+.custom-box-1 {
+    width: 50vw;
+    height: 70vh;
+    max-width: 90%;
+    max-height: 80%;
+    overflow: auto;
     border-radius: 5em;
-    background: url(../sources/avance1.jpg);
-    background-size: cover;
+    background: url(../sources/backblur1.jpg);
+    background-size: 120em;
+    background-position: -55em;
 }
 
-.custom-box-2  {
-    width: 50vw; /* Adjust the width as needed */
-    height: 70vh; /* Adjust the height as needed */
-    max-width: 90%; /* Ensures responsiveness */
-    max-height: 80%; /* Ensures responsiveness */
-    overflow: auto; /* Adds scroll if content exceeds the box */
+.custom-box-2 {
+    width: 50vw;
+    height: 70vh;
+    max-width: 90%;
+    max-height: 80%;
+    overflow: auto;
     border-radius: 5em;
     background: url(../sources/backblur2.jpg);
     background-size: cover;
+    background-position: -25em;
 }
 
 .custom-box-3  {
@@ -815,19 +821,20 @@ img.card-image.blur_4 {
     max-height: 80%; /* Ensures responsiveness */
     overflow: auto; /* Adds scroll if content exceeds the box */
     border-radius: 5em;
-    background: url(../sources/avance3.png);
+    background: url(../sources/backblur3.jpg);
     background-size: cover;
 }
 
-.custom-box-4  {
-    width: 50vw; /* Adjust the width as needed */
-    height: 70vh; /* Adjust the height as needed */
-    max-width: 90%; /* Ensures responsiveness */
-    max-height: 80%; /* Ensures responsiveness */
-    overflow: auto; /* Adds scroll if content exceeds the box */
+.custom-box-4 {
+    width: 50vw;
+    height: 70vh;
+    max-width: 90%;
+    max-height: 80%;
+    overflow: auto;
     border-radius: 5em;
-    background: url(../sources/avance4.jpg);
-    background-size: cover;
+    background: url(../sources//backblur4.jpg);
+    background-size: 125em;
+    background-position: -65em;
 }
 
 .m-2 {
@@ -937,6 +944,15 @@ img.card-image.blur_4 {
   
 .centered-text.animate {
     font-weight: 100;
+}
+
+span.thin {
+    font-weight: 100;
+}
+
+img.card-logo.cl1 {
+    position: absolute;
+    top: 4%;
 }
 
 /* Media query para el contenedor principal */
@@ -1115,6 +1131,14 @@ img.card-image.blur_4 {
     .modal-text {
         margin-top: 7.5em;
         font-size: 0.7em;
+    }
+
+    .centered-text {
+        font-size: clamp(1rem, 0.5vw, 1.5rem);
+        color: #fff;
+        max-width: 90%;
+        line-height: 1.5;
+        margin: 15vh 0 0 0;
     }
 }
 
